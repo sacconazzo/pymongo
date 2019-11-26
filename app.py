@@ -20,12 +20,14 @@ class Employees(Resource):
         return page_sanitized
         # return jsonify(x)
 
+
 class Employees_Filter(Resource):
     def get(self, string_find):
         x = mycollection.find({"name": {'$regex': string_find}})
         page_sanitized = json.loads(json_util.dumps(x))
         return page_sanitized
         # return jsonify(x)
+
 
 class Employees_Insert(Resource):
     def get(self, employee_name):
@@ -36,7 +38,7 @@ class Employees_Insert(Resource):
 
 
 api.add_resource(Employees, '/employees')  # Route_1
-api.add_resource(Employees_Filter, '/employees/<string_find>')  # Route_1
+api.add_resource(Employees_Filter, '/employees/<string_find>')  # Route_2
 api.add_resource(Employees_Insert, '/employee/<employee_name>')  # Route_3
 
 
