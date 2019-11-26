@@ -16,25 +16,20 @@ api = Api(app)
 class Employees(Resource):
     def get(self):
         x = mycollection.find()
-        page_sanitized = json.loads(json_util.dumps(x))
-        return page_sanitized
+        return json.loads(json_util.dumps(x))
         # return jsonify(x)
 
 
 class Employees_Filter(Resource):
     def get(self, string_find):
         x = mycollection.find({"name": {'$regex': string_find}})
-        page_sanitized = json.loads(json_util.dumps(x))
-        return page_sanitized
-        # return jsonify(x)
+        return json.loads(json_util.dumps(x))
 
 
 class Employees_Insert(Resource):
     def get(self, employee_name):
-        print(employee_name)
         result = mycollection.insert({"name": employee_name})
-        page_sanitized = json.loads(json_util.dumps(result))
-        return page_sanitized
+        return json.loads(json_util.dumps(result))
 
 
 api.add_resource(Employees, '/employees')  # Route_1
