@@ -16,7 +16,7 @@ auth = HTTPBasicAuth()
 api = Api(app)
 
 users = {
-    "sacconazzo": generate_password_hash("righini323"),
+    "test": generate_password_hash("test"),
     "scn": generate_password_hash("try")
 }
 
