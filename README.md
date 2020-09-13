@@ -7,5 +7,5 @@ prove restAPI mongodb e flask
 - POST '/employee' - insert new object with free properties
 - DELETE '/employee/<oid>' - delete an object
 
-try it here: METH http://giona.sytes.net:5002/<target>
-- (example http://giona.sytes.net:5002/employees)
+try it here: http://giona.sytes.net:5002/<target>
+- (example GET http://giona.sytes.net:5002/employees)
