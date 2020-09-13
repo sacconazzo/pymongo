@@ -6,3 +6,5 @@ prove restAPI mongodb e flask
 - GET '/employee/<employee_name>' - insert new name
 - POST '/employee' - insert new object with free properties
 - DELETE '/employee/<oid>' - delete an object
+
+try it - http://giona.sytes.net:5002/employees
