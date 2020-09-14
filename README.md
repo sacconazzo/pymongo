@@ -8,4 +8,4 @@ prove restAPI mongodb e flask
 - DELETE '/employee/<oid>' - delete an object
 
 try it here: giona.sytes.net:5002
-- (example GET https://giona.sytes.net:5002/employees)
+- (example GET https://scn:try@giona.sytes.net:5002/employees)
